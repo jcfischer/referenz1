@@ -1,0 +1,5 @@
+<h1>Alle Seiten</h1>
+
+<% @pages.each do |page| %>
+  <%= link_to(h(page.title), :action => 'show', :id => page) %><br/>
+<% end %>
