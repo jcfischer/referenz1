@@ -1,0 +1,14 @@
+<% form_for :page, @page, 
+            :url => @page.new_record? ? 
+                    { :action => 'create'} : 
+                    { :action => 'update', :id => @page} ,
+            :html => {:id => 'edit_form'} do |f| %>
+  <label for="page_title">Titel:</label><br/>
+    <%= f.text_field 'title', :size => 20 %><br/>
+  <label for="page_category">Kategorie:</label><br/>
+    <%= f.text_field 'category' %><br/>
+  <label for="page_body">Inhalt:</label><br/>
+    <%= f.text_area 'body' %><br/>
+  <%= submit_tag @page.new_record? ? "Anlegen" : "Speichern" %>
+  <%= link_to "Abbrechen", :action => :index %>
+<% end %>

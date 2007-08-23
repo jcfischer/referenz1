@@ -1,5 +1,13 @@
 <h1>Alle Seiten</h1>
 
+<table>
 <% @pages.each do |page| %>
-  <%= link_to(h(page.title), :action => 'show', :id => page) %><br/>
+  <tr>
+    <td><%= link_to(h(page.title), :action => 'show', :id => page) %><br/></td>
+    <td><%= button_to "Löschen", {:action => 'destroy', :id => page} %></td>
+  </tr>
 <% end %>
+</table>
+<p>
+  <%= link_to "Neue Seite", :action => 'new' %>
+</p>

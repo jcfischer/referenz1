@@ -1,4 +1,9 @@
 <h1><%= h @page.title %></h1>
-<h1><%=  @page.title %></h1>
+
+<%= link_to "Bearbeiten", :action => 'edit', :id => @page %>
+
+<%= link_to "Liste", :action => 'index' %>
+
 <p>Kategorie: <%= h @page.category %></p>
 <p><%= h @page.body %></p>
+

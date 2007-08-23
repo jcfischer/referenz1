@@ -3,8 +3,12 @@ require File.dirname(__FILE__) + '/../test_helper'
 class PageTest < Test::Unit::TestCase
   fixtures :pages
 
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  def test_fixtures_1
+    p = Page.find 1
+    assert "MyString", p.title
+  end
+  
+  def test_fixtures_2
+    assert "MyString", pages(:one)
   end
 end
