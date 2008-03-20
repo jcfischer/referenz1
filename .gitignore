@@ -1,2 +1,4 @@
 # ignore log files
-*.log
+log/*.log
+tmp/**/*
+.DS_Store
