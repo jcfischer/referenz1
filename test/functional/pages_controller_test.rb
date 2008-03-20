@@ -36,6 +36,12 @@ class PagesControllerTest < Test::Unit::TestCase
     get :show, :id => 99
     assert_response :missing
   end
+  
+  def test_show_should_increase_read_counter
+    assert_difference 'Page.find(1).read_counter', 1 do
+      get :show, :id => 1
+    end
+  end
 
   def test_edit
     get :edit, :id => 1
@@ -71,6 +77,13 @@ class PagesControllerTest < Test::Unit::TestCase
       assert_equal v, p.send(k)
     end
   end
+  
+  def test_update_action_failure
+    param = { :title => '', :body => 'Inhalt', :category => 'main'}
+    post :update, :id => 1, :page => param
+    assert_response :success
+    assert_template "edit"
+  end
 
   def test_create_action
     param = { :title => 'neu aus Test', :body => 'Inhalt', :category => 'main'}
@@ -81,6 +94,14 @@ class PagesControllerTest < Test::Unit::TestCase
     assert_equal num_pages + 1, Page.count
     assert Page.find_by_title(param[:title])
   end
+  
+  def test_create_invalid_action
+    param = {}
+    post :create, :page => param
+    assert_response :success
+    assert_template 'new'
+  end
+  
 
   def test_create_action_get
     actions = [ :create, :destroy, :update ]
@@ -150,6 +171,15 @@ class PagesControllerTest < Test::Unit::TestCase
     assert_response :redirect
     assert_redirected_to :action => :index
     assert Page.find(1)
+  end
+
+  def test_toggle_published
+    p = Page.find 1
+    assert_equal true, p.published?
+    get :toggle, :id => 1
+    assert_response :success
+    p.reload
+    assert_equal false, p.published? 
   end
 
   def test_create_link_in_index

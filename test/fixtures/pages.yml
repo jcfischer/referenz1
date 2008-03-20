@@ -4,6 +4,8 @@ one:
   title: Die erste Seite
   body: "Hier ist der Inhalt"
   category: Test
+  read_counter: 0
+  published: true
   created_at: 2007-08-21 00:21:59
   updated_at: 2007-08-21 00:21:59
 two:
@@ -11,5 +13,7 @@ two:
   title: Impressum
   body: "Wer hat was zu sagen"
   category: Inhalt
+  read_counter: 0
+  published: true
   created_at: 2007-08-21 00:21:59
   updated_at: 2007-08-21 00:21:59

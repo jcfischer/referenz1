@@ -1,5 +1,17 @@
 <h1>Alle Seiten</h1>
 
+<% content_for :sidebar do %>
+  <div id="category_list">
+    <ul class="selection">
+      <% @categories.each do |c| %>
+        <li id="category_<%= c.id %>"><%= link_to( h(c.name), 
+                         :controller => 'pages', 
+                         :action => 'category', :id => c)  %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <table>
 <% @pages.each do |page| %>
   <tr>

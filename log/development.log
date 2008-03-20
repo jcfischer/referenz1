@@ -1,825 +1,1104 @@
-  [4;36;1mSQL (0.000171)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000152)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.022749)[0m   [0;1mSELECT * FROM schema_info[0m
-  [4;35;1mSQL (0.000686)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (0.002588)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mSQL (0.001141)[0m   [0mSHOW KEYS FROM pages[0m
-  [4;36;1mSQL (0.000181)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000142)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.066803)[0m   [0;1mDROP DATABASE IF EXISTS `referenz_test`[0m
-  [4;35;1mSQL (0.000569)[0m   [0mCREATE DATABASE `referenz_test` DEFAULT CHARACTER SET `utf8`[0m
-  [4;36;1mSQL (0.000164)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'pages': DROP TABLE pages[0m
-  [4;35;1mSQL (0.002990)[0m   [0mCREATE TABLE pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `category` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
-  [4;36;1mSQL (0.002038)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
-  [4;35;1mSQL (0.000690)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
-  [4;36;1mSQL (0.001996)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
-  [4;35;1mSQL (0.001455)[0m   [0mUPDATE schema_info SET version = 1[0m
-  [4;36;1mSQL (0.000170)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000123)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.000306)[0m   [0;1mSELECT * FROM schema_info[0m
-  [4;35;1mSQL (0.000514)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (0.011661)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mSQL (0.001369)[0m   [0mSHOW KEYS FROM pages[0m
-  [4;36;1mSQL (0.000161)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000141)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.053786)[0m   [0;1mDROP DATABASE IF EXISTS `referenz_test`[0m
-  [4;35;1mSQL (0.000600)[0m   [0mCREATE DATABASE `referenz_test` DEFAULT CHARACTER SET `utf8`[0m
-  [4;36;1mSQL (0.000162)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'pages': DROP TABLE pages[0m
-  [4;35;1mSQL (0.002922)[0m   [0mCREATE TABLE pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `category` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
-  [4;36;1mSQL (0.001868)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
-  [4;35;1mSQL (0.000501)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
-  [4;36;1mSQL (0.002049)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
-  [4;35;1mSQL (0.000498)[0m   [0mUPDATE schema_info SET version = 1[0m
-  [4;36;1mSQL (0.000164)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.000308)[0m   [0;1mSELECT * FROM schema_info[0m
-  [4;35;1mSQL (0.000488)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (0.011433)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mSQL (0.001189)[0m   [0mSHOW KEYS FROM pages[0m
-  [4;36;1mSQL (0.000188)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000140)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.051401)[0m   [0;1mDROP DATABASE IF EXISTS `referenz_test`[0m
-  [4;35;1mSQL (0.000645)[0m   [0mCREATE DATABASE `referenz_test` DEFAULT CHARACTER SET `utf8`[0m
-  [4;36;1mSQL (0.000161)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000117)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'pages': DROP TABLE pages[0m
-  [4;35;1mSQL (0.002546)[0m   [0mCREATE TABLE pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `category` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
-  [4;36;1mSQL (0.001687)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
-  [4;35;1mSQL (0.000508)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
-  [4;36;1mSQL (0.003091)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
-  [4;35;1mSQL (0.000538)[0m   [0mUPDATE schema_info SET version = 1[0m
-  [4;36;1mSQL (0.000165)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.000307)[0m   [0;1mSELECT * FROM schema_info[0m
-  [4;35;1mSQL (0.000510)[0m   [0mSHOW TABLES[0m
-  [4;36;1mSQL (0.011344)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mSQL (0.001459)[0m   [0mSHOW KEYS FROM pages[0m
-  [4;36;1mSQL (0.000172)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000146)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.051894)[0m   [0;1mDROP DATABASE IF EXISTS `referenz_test`[0m
-  [4;35;1mSQL (0.000670)[0m   [0mCREATE DATABASE `referenz_test` DEFAULT CHARACTER SET `utf8`[0m
-  [4;36;1mSQL (0.000163)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000119)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'pages': DROP TABLE pages[0m
-  [4;35;1mSQL (0.002447)[0m   [0mCREATE TABLE pages (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `category` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
-  [4;36;1mSQL (0.001680)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
-  [4;35;1mSQL (0.000477)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
-  [4;36;1mSQL (0.001802)[0m   [0;1mSHOW FIELDS FROM schema_info[0m
-  [4;35;1mSQL (0.000419)[0m   [0mUPDATE schema_info SET version = 1[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000273)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000189)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.049652)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000557)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000372)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateCategories (3)
+  [4;35;1mSQL (0.169219)[0m   [0mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.148220)[0m   [0;1mALTER TABLE `pages` ADD `category_id` int(11)[0m
+  [4;35;1mSQL (0.021044)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.000540)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000724)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.085831)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.003439)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (0.001302)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (0.003745)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.004568)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.001344)[0m   [0mSHOW KEYS FROM `pages`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000173)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000427)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000236)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000228)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to MoveCategories (4)
+  [4;36;1mSQL (0.002468)[0m   [0;1mSHOW COLUMNS FROM `pages` LIKE 'category'[0m
+  [4;35;1mSQL (0.077477)[0m   [0mALTER TABLE `pages` CHANGE `category` `kategory` varchar(255)[0m
+  [4;36;1mPage Load (0.002171)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mPage Columns (0.003090)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mCategory Columns (0.002576)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.000720)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'rails') LIMIT 1[0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.000344)[0m   [0mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('rails', '2008-03-19 20:53:03', '2008-03-19 20:53:03')[0m
+  [4;36;1mSQL (0.000650)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000183)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.014859)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = '<em><blink>Rails Referenz</blink></em> (1)' AND pages.id <> 1) LIMIT 1[0m
+  [4;35;1mPage Update (0.000485)[0m   [0mUPDATE `pages` SET `title` = '<em><blink>Rails Referenz</blink></em>', `body` = 'Diese Seite beschreibt Rails', `read_counter` = 1, `category_id` = 1, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'rails' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.001056)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000814)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ruby') LIMIT 1[0m
+  [4;36;1mSQL (0.000205)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.000347)[0m   [0mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('ruby', '2008-03-19 20:53:03', '2008-03-19 20:53:03')[0m
+  [4;36;1mSQL (0.000597)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.000987)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'Ruby Referenz ()' AND pages.id <> 2) LIMIT 1[0m
+  [4;35;1mPage Update (0.000836)[0m   [0mUPDATE `pages` SET `title` = 'Ruby Referenz', `body` = 'Ruby etc.', `read_counter` = NULL, `category_id` = 2, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ruby' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.000742)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000888)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'web') LIMIT 1[0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.000297)[0m   [0mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('web', '2008-03-19 20:53:03', '2008-03-19 20:53:03')[0m
+  [4;36;1mSQL (0.000716)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000222)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.001309)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'HTML Referenz ()' AND pages.id <> 3) LIMIT 1[0m
+  [4;35;1mPage Update (0.000517)[0m   [0mUPDATE `pages` SET `title` = 'HTML Referenz', `body` = 'Alles über HTML', `read_counter` = NULL, `category_id` = 3, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'web' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.000737)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000872)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'test') LIMIT 1[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.000360)[0m   [0mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('test', '2008-03-19 20:53:03', '2008-03-19 20:53:03')[0m
+  [4;36;1mSQL (0.000643)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000174)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.001179)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'test ()' AND pages.id <> 4) LIMIT 1[0m
+  [4;35;1mPage Update (0.001417)[0m   [0mUPDATE `pages` SET `title` = 'test', `body` = 'auch test', `read_counter` = NULL, `category_id` = 4, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'test' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.000869)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000669)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'uiaeuie') LIMIT 1[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.000317)[0m   [0mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('uiaeuie', '2008-03-19 20:53:03', '2008-03-19 20:53:03')[0m
+  [4;36;1mSQL (0.000604)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000160)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.001097)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'iuae ()' AND pages.id <> 5) LIMIT 1[0m
+  [4;35;1mPage Update (0.000378)[0m   [0mUPDATE `pages` SET `title` = 'iuae', `body` = 'uiaeuae', `read_counter` = NULL, `category_id` = 5, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'uiaeuie' WHERE `id` = 5[0m
+  [4;36;1mSQL (0.000752)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000956)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mBEGIN[0m
+  [4;35;1mCategory Create (0.000355)[0m   [0mINSERT INTO `categories` (`name`, `updated_at`, `created_at`) VALUES('ActiveRecord', '2008-03-19 20:53:03', '2008-03-19 20:53:03')[0m
+  [4;36;1mSQL (0.000663)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000179)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.001202)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks ()' AND pages.id <> 6) LIMIT 1[0m
+  [4;35;1mPage Update (0.000374)[0m   [0mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = NULL, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 6[0m
+  [4;36;1mSQL (0.000657)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000687)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;36;1mSQL (0.000170)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.001403)[0m   [0mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks ()' AND pages.id <> 7) LIMIT 1[0m
+  [4;36;1mPage Update (0.000454)[0m   [0;1mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = NULL, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 7[0m
+  [4;35;1mSQL (0.001032)[0m   [0mCOMMIT[0m
+  [4;36;1mCategory Load (0.000857)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;35;1mSQL (0.000173)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.001148)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks ()' AND pages.id <> 8) LIMIT 1[0m
+  [4;35;1mPage Update (0.000485)[0m   [0mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = NULL, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 8[0m
+  [4;36;1mSQL (0.000654)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000854)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;36;1mSQL (0.000214)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.001110)[0m   [0mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks ()' AND pages.id <> 9) LIMIT 1[0m
+  [4;36;1mPage Update (0.000472)[0m   [0;1mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = NULL, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 9[0m
+  [4;35;1mSQL (0.000869)[0m   [0mCOMMIT[0m
+  [4;36;1mCategory Load (0.000870)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;35;1mSQL (0.000172)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.001051)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks (90)' AND pages.id <> 10) LIMIT 1[0m
+  [4;35;1mPage Update (0.000369)[0m   [0mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = 90, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 10[0m
+  [4;36;1mSQL (0.000644)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000895)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;36;1mSQL (0.000226)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.001163)[0m   [0mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks (88)' AND pages.id <> 11) LIMIT 1[0m
+  [4;36;1mPage Update (0.000365)[0m   [0;1mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = 88, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 11[0m
+  [4;35;1mSQL (0.000688)[0m   [0mCOMMIT[0m
+  [4;36;1mCategory Load (0.000950)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;35;1mSQL (0.000222)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.001126)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks (0)' AND pages.id <> 12) LIMIT 1[0m
+  [4;35;1mPage Update (0.000370)[0m   [0mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = 0, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 12[0m
+  [4;36;1mSQL (0.000805)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000731)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.001168)[0m   [0mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks (0)' AND pages.id <> 13) LIMIT 1[0m
+  [4;36;1mPage Update (0.000522)[0m   [0;1mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = 0, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 13[0m
+  [4;35;1mSQL (0.000669)[0m   [0mCOMMIT[0m
+  [4;36;1mCategory Load (0.000591)[0m   [0;1mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.000870)[0m   [0;1mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks (0)' AND pages.id <> 14) LIMIT 1[0m
+  [4;35;1mPage Update (0.000375)[0m   [0mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = 0, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 14[0m
+  [4;36;1mSQL (0.000627)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCategory Load (0.000555)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`name` = 'ActiveRecord') LIMIT 1[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.000824)[0m   [0mSELECT * FROM `pages` WHERE (pages.title = 'Callbacks ()' AND pages.id <> 15) LIMIT 1[0m
+  [4;36;1mPage Update (0.000345)[0m   [0;1mUPDATE `pages` SET `title` = 'Callbacks', `body` = 'uaieuiae', `read_counter` = NULL, `category_id` = 6, `published` = NULL, `updated_at` = '2008-03-19 20:53:03', `kategory` = 'ActiveRecord' WHERE `id` = 15[0m
+  [4;35;1mSQL (0.000603)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.028469)[0m   [0;1mALTER TABLE `pages` DROP `kategory`[0m
+  [4;35;1mSQL (0.000581)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000448)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000546)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002416)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mSQL (0.003088)[0m   [0mdescribe `categories`[0m
+  [4;36;1mSQL (0.001017)[0m   [0;1mSHOW KEYS FROM `categories`[0m
+  [4;35;1mSQL (0.002579)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.002066)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.002685)[0m   [0mSHOW KEYS FROM `pages`[0m
 
 
-Processing PagesController#show (for 127.0.0.1 at 2007-08-22 15:22:35) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.015253)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.041001)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.06954 (14 reqs/sec) | Rendering: 0.00782 (11%) | DB: 0.05625 (80%) | 200 OK [http://localhost/pages/show/1]
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:53:41) [GET]
+  Session ID: e73ad970a34269ebcd48cd2ab8aab70d
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000195)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000160)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPage Load (0.001459)[0m   [0;1mSELECT * FROM `pages` [0m
 
 
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 15:22:40) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.011838)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.000966)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.02819 (35 reqs/sec) | Rendering: 0.01002 (35%) | DB: 0.01280 (45%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 15:23:01) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.013013)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.001106)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.02806 (35 reqs/sec) | Rendering: 0.00838 (29%) | DB: 0.01412 (50%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 15:25:20) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.068304)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.003518)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.09029 (11 reqs/sec) | Rendering: 0.01180 (13%) | DB: 0.07182 (79%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2007-08-22 15:25:21) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {}
-
-
-ActionController::RoutingError (No route matches "/de/" with {:method=>:get}):
-    /vendor/rails/actionpack/lib/action_controller/routing.rb:1373:in `recognize_path'
-    /vendor/rails/actionpack/lib/action_controller/routing.rb:1356:in `recognize'
-    /vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `require'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    /vendor/rails/railties/lib/commands/server.rb:39
-    script/server:3:in `require'
-    script/server:3
-
-
-Rendering /Users/jcf/dev/work/referenz/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
-
-
-Processing ApplicationController#index (for 127.0.0.1 at 2007-08-22 15:25:28) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {}
-
-
-ActionController::RoutingError (No route matches "/de/" with {:method=>:get}):
-    /vendor/rails/actionpack/lib/action_controller/routing.rb:1373:in `recognize_path'
-    /vendor/rails/actionpack/lib/action_controller/routing.rb:1356:in `recognize'
-    /vendor/rails/railties/lib/dispatcher.rb:38:in `dispatch'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `require'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    /vendor/rails/railties/lib/commands/server.rb:39
-    script/server:3:in `require'
-    script/server:3
-
-
-Rendering /Users/jcf/dev/work/referenz/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 15:25:28) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.002617)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.002115)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.02128 (46 reqs/sec) | Rendering: 0.01067 (50%) | DB: 0.00473 (22%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 15:32:31) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.011730)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.000888)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.09672 (10 reqs/sec) | Rendering: 0.00863 (8%) | DB: 0.01262 (13%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 15:46:14) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.014012)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.002548)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.03290 (30 reqs/sec) | Rendering: 0.01045 (31%) | DB: 0.01656 (50%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 16:18:05) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.012150)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.000922)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.02695 (37 reqs/sec) | Rendering: 0.00852 (31%) | DB: 0.01307 (48%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing PagesController#update (for 127.0.0.1 at 2007-08-22 16:18:15) [POST]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"commit"=>"Speichern", "action"=>"update", "controller"=>"pages", "page"=>{"category"=>"rails", "title"=>"Rails Referenz", "body"=>"Diese Seite beschreibt Rails"}}
-
-
-ActiveRecord::RecordNotFound (Couldn't find Page without an ID):
-    /vendor/rails/activerecord/lib/active_record/base.rb:1014:in `find_from_ids'
-    /vendor/rails/activerecord/lib/active_record/base.rb:430:in `find'
-    /app/controllers/pages_controller.rb:25:in `update'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:1140:in `send'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:1140:in `perform_action_without_filters'
-    /vendor/rails/actionpack/lib/action_controller/filters.rb:695:in `call_filters'
-    /vendor/rails/actionpack/lib/action_controller/filters.rb:687:in `perform_action_without_benchmark'
+ActionController::MissingTemplate (Missing layout layouts/referenz.html.erb in view path /Users/jcf/dev/work/referenz/app/views):
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1248:in `assert_existence_of_template_file'
+    /vendor/rails/actionpack/lib/action_controller/layout.rb:256:in `render_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1132:in `default_render'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1138:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:697:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
     /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
     /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    /vendor/rails/actionpack/lib/action_controller/rescue.rb:133:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching.rb:669:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
     /vendor/rails/actionpack/lib/action_controller/caching.rb:668:in `perform_action'
-    /vendor/rails/activerecord/lib/active_record/query_cache.rb:105:in `cache'
-    /vendor/rails/actionpack/lib/action_controller/caching.rb:667:in `perform_action'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:494:in `send'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:494:in `process_without_filters'
-    /vendor/rails/actionpack/lib/action_controller/filters.rb:683:in `process_without_session_management_support'
-    /vendor/rails/actionpack/lib/action_controller/session_management.rb:122:in `process'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:346:in `process'
-    /vendor/rails/railties/lib/dispatcher.rb:39:in `dispatch'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:513:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:513:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:123:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:377:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
     /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
     /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `require'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
     /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
     /vendor/rails/railties/lib/commands/server.rb:39
     script/server:3:in `require'
     script/server:3
-
-
-Rendering /Users/jcf/dev/work/referenz/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-22 16:18:30) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.011606)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.001702)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Completed in 0.02931 (34 reqs/sec) | Rendering: 0.01073 (36%) | DB: 0.01331 (45%) | 200 OK [http://localhost/pages/edit/1]
-
-
-Processing PagesController#update (for 127.0.0.1 at 2007-08-22 16:19:12) [POST]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"commit"=>"Speichern", "action"=>"update", "controller"=>"pages", "page"=>{"category"=>"rails", "title"=>"Rails Referenz", "body"=>"Diese Seite beschreibt Rails"}}
-
-
-ActiveRecord::RecordNotFound (Couldn't find Page without an ID):
-    /vendor/rails/activerecord/lib/active_record/base.rb:1014:in `find_from_ids'
-    /vendor/rails/activerecord/lib/active_record/base.rb:430:in `find'
-    /app/controllers/pages_controller.rb:25:in `update'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:1140:in `send'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:1140:in `perform_action_without_filters'
-    /vendor/rails/actionpack/lib/action_controller/filters.rb:695:in `call_filters'
-    /vendor/rails/actionpack/lib/action_controller/filters.rb:687:in `perform_action_without_benchmark'
-    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
-    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    /vendor/rails/actionpack/lib/action_controller/rescue.rb:133:in `perform_action_without_caching'
-    /vendor/rails/actionpack/lib/action_controller/caching.rb:668:in `perform_action'
-    /vendor/rails/activerecord/lib/active_record/query_cache.rb:105:in `cache'
-    /vendor/rails/actionpack/lib/action_controller/caching.rb:667:in `perform_action'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:494:in `send'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:494:in `process_without_filters'
-    /vendor/rails/actionpack/lib/action_controller/filters.rb:683:in `process_without_session_management_support'
-    /vendor/rails/actionpack/lib/action_controller/session_management.rb:122:in `process'
-    /vendor/rails/actionpack/lib/action_controller/base.rb:346:in `process'
-    /vendor/rails/railties/lib/dispatcher.rb:39:in `dispatch'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `require'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    /vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    /vendor/rails/railties/lib/commands/server.rb:39
-    script/server:3:in `require'
-    script/server:3
-
-
-Rendering /Users/jcf/dev/work/referenz/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 11:18:38) [GET]
-  Session ID: 2cd3d17dd6d5cc0a52357bc5cf1bf963
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;36;1mSQL (0.224268)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.030937)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mPage Load (0.967388)[0m   [0;1mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;35;1mPage Columns (0.266423)[0m   [0mSHOW FIELDS FROM pages[0m
-Completed in 1.29913 (0 reqs/sec) | Rendering: 0.02828 (2%) | DB: 1.48902 (114%) | 200 OK [http://localhost/pages]
-
-
-Processing PagesController#destroy (for 127.0.0.1 at 2007-08-23 11:18:46) [POST]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"destroy", "id"=>"4", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.002574)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.108136)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 4) [0m
-  [4;36;1mSQL (0.001243)[0m   [0;1mBEGIN[0m
-  [4;35;1mPage Destroy (0.284812)[0m   [0m DELETE FROM pages
- WHERE `id` = 4
-[0m
-  [4;36;1mSQL (0.050144)[0m   [0;1mCOMMIT[0m
-Redirected to http://localhost:3000/pages/list
-Completed in 0.45430 (2 reqs/sec) | DB: 0.44691 (98%) | 302 Found [http://localhost/pages/destroy/4]
-
-
-Processing PagesController#list (for 127.0.0.1 at 2007-08-23 11:18:47) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"list", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000875)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/list
-  [4;36;1mPage Columns (0.002655)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.04082 (24 reqs/sec) | Rendering: 0.03208 (78%) | DB: 0.00353 (8%) | 200 OK [http://localhost/pages/list]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 11:19:20) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000895)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;36;1mPage Columns (0.006758)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.02438 (41 reqs/sec) | Rendering: 0.01146 (47%) | DB: 0.00765 (31%) | 200 OK [http://localhost/pages/]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 11:23:23) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000860)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;36;1mPage Columns (0.002533)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.01791 (55 reqs/sec) | Rendering: 0.00979 (54%) | DB: 0.00339 (18%) | 200 OK [http://localhost/pages/]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 11:24:06) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.001223)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;36;1mPage Columns (0.011539)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.02782 (35 reqs/sec) | Rendering: 0.00977 (35%) | DB: 0.01276 (45%) | 200 OK [http://localhost/pages/]
-
-
-Processing PagesController#destroy (for 127.0.0.1 at 2007-08-23 11:24:19) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"destroy", "method"=>"post", "id"=>"3", "controller"=>"pages"}
-Redirected to http://localhost:3000/pages/list
-Filter chain halted as [#<ActionController::Filters::ClassMethods::ProcFilter:0x34ce6d8 @filter=#<Proc:0x024dd4f4@/Users/jcf/dev/work/referenz/vendor/rails/actionpack/lib/action_controller/verification.rb:74>>] returned_false.
-Completed in 0.00144 (694 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/pages/destroy/3?method=post]
-
-
-Processing PagesController#list (for 127.0.0.1 at 2007-08-23 11:24:19) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiIk51ciBwZXIgUE9TVCBSZXF1ZXN0IG3DtmdsaWNo%0ABjoKQHVzZWR7BjsGVA%3D%3D--65c5b841c630536f09659167056a9625d1f26c36
-  Parameters: {"action"=>"list", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000860)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/list
-  [4;36;1mPage Columns (0.011586)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.02640 (37 reqs/sec) | Rendering: 0.00918 (34%) | DB: 0.01245 (47%) | 200 OK [http://localhost/pages/list]
-
-
-Processing PagesController#list (for 127.0.0.1 at 2007-08-23 11:24:21) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"list", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000990)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/list
-  [4;36;1mPage Columns (0.002647)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.09523 (10 reqs/sec) | Rendering: 0.01329 (13%) | DB: 0.00364 (3%) | 200 OK [http://localhost/pages/list]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 11:24:50) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000914)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;36;1mPage Columns (0.012032)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.02808 (35 reqs/sec) | Rendering: 0.01056 (37%) | DB: 0.01295 (46%) | 200 OK [http://localhost/pages/]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 15:41:15) [GET]
-  Session ID: f399af72441dbb291788370a32ff3e28
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;36;1mSQL (0.000250)[0m   [0;1mSET NAMES 'utf8'[0m
-  [4;35;1mSQL (0.000155)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
-  [4;36;1mPage Load (0.042029)[0m   [0;1mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;35;1mPage Columns (0.002634)[0m   [0mSHOW FIELDS FROM pages[0m
-
-
-ActionView::TemplateError (undefined method `button_ot' for #<ActionView::Base:0x22379c0>) on line #7 of app/views/pages/index.html.erb:
-4: <% @pages.each do |page| %>
-5:   <tr>
-6:     <td><%= link_to(h(page.title), :action => 'show', :id => page) %><br/></td>
-7:     <td><%= button_ot "Löschen", {:action => 'destroy', :id => page} %></td>
-8:   </tr>
-9: <% end %>
-10: </table>
-    app/views/pages/index.html.erb:7:in `_run_erb_47app47views47pages47index46html46erb'
-    app/views/pages/index.html.erb:4:in `each'
-    app/views/pages/index.html.erb:4:in `_run_erb_47app47views47pages47index46html46erb'
-    vendor/rails/actionpack/lib/action_view/base.rb:360:in `send'
-    vendor/rails/actionpack/lib/action_view/base.rb:360:in `compile_and_render_template'
-    vendor/rails/actionpack/lib/action_view/base.rb:336:in `render_template'
-    vendor/rails/actionpack/lib/action_view/base.rb:286:in `render_file'
-    vendor/rails/actionpack/lib/action_controller/base.rb:883:in `render_file'
-    vendor/rails/actionpack/lib/action_controller/base.rb:784:in `render_with_no_layout'
-    vendor/rails/actionpack/lib/action_controller/layout.rb:249:in `render_without_benchmark'
-    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
-    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
-    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
-    vendor/rails/actionpack/lib/action_controller/base.rb:1141:in `perform_action_without_filters'
-    vendor/rails/actionpack/lib/action_controller/filters.rb:695:in `call_filters'
-    vendor/rails/actionpack/lib/action_controller/filters.rb:687:in `perform_action_without_benchmark'
-    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    /opt/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
-    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
-    vendor/rails/actionpack/lib/action_controller/rescue.rb:133:in `perform_action_without_caching'
-    vendor/rails/actionpack/lib/action_controller/caching.rb:668:in `perform_action'
-    vendor/rails/activerecord/lib/active_record/query_cache.rb:105:in `cache'
-    vendor/rails/actionpack/lib/action_controller/caching.rb:667:in `perform_action'
-    vendor/rails/actionpack/lib/action_controller/base.rb:494:in `send'
-    vendor/rails/actionpack/lib/action_controller/base.rb:494:in `process_without_filters'
-    vendor/rails/actionpack/lib/action_controller/filters.rb:683:in `process_without_session_management_support'
-    vendor/rails/actionpack/lib/action_controller/session_management.rb:122:in `process'
-    vendor/rails/actionpack/lib/action_controller/base.rb:346:in `process'
-    vendor/rails/railties/lib/dispatcher.rb:39:in `dispatch'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
-    /opt/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
-    vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    vendor/rails/activesupport/lib/active_support/dependencies.rb:488:in `load'
-    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
-    /opt/local/lib/ruby/vendor_ruby/1.8/rubygems/custom_require.rb:27:in `require'
-    vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
-    vendor/rails/activesupport/lib/active_support/dependencies.rb:495:in `require'
-    vendor/rails/railties/lib/commands/server.rb:39
-    script/server:3:in `require'
-    script/server:3
-
 
 Rendering /Users/jcf/dev/work/referenz/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
 
 
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 15:41:23) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
   Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;36;1mPage Load (0.000916)[0m   [0;1mSELECT * FROM pages [0m
-Rendering template within layouts/pages
+  [4;35;1mPage Load (0.001498)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
 Rendering pages/index
-  [4;35;1mPage Columns (0.031870)[0m   [0mSHOW FIELDS FROM pages[0m
-Completed in 0.04892 (20 reqs/sec) | Rendering: 0.01143 (23%) | DB: 0.03542 (72%) | 200 OK [http://localhost/pages]
+  [4;36;1mPage Columns (0.002714)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02259 (44 reqs/sec) | Rendering: 0.01203 (53%) | DB: 0.00421 (18%) | 200 OK [http://localhost/pages]
 
 
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 18:39:00) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;36;1mPage Load (0.017127)[0m   [0;1mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;35;1mPage Columns (0.002979)[0m   [0mSHOW FIELDS FROM pages[0m
-Completed in 0.03532 (28 reqs/sec) | Rendering: 0.01074 (30%) | DB: 0.02011 (56%) | 200 OK [http://localhost/pages]
-
-
-Processing PagesController#new (for 127.0.0.1 at 2007-08-23 18:39:01) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"new", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.011748)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Rendering template within layouts/pages
-Rendering pages/new
-Rendered pages/_form (0.00975)
-Completed in 0.02873 (34 reqs/sec) | Rendering: 0.01161 (40%) | DB: 0.01175 (40%) | 200 OK [http://localhost/pages/new]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 18:39:22) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000871)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
-Rendering pages/index
-  [4;36;1mPage Columns (0.011814)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.03274 (30 reqs/sec) | Rendering: 0.01531 (46%) | DB: 0.01269 (38%) | 200 OK [http://localhost/pages]
-
-
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 18:39:24) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.002138)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001838)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.01646 (60 reqs/sec) | Rendering: 0.00728 (44%) | DB: 0.00398 (24%) | 200 OK [http://localhost/pages/show/3]
-
-
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 18:41:13) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.011652)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001037)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.02591 (38 reqs/sec) | Rendering: 0.00829 (32%) | DB: 0.01269 (48%) | 200 OK [http://localhost/pages/show/3]
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-23 18:41:15) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.011488)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001160)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Rendered pages/_form (0.00787)
-Completed in 0.02725 (36 reqs/sec) | Rendering: 0.00954 (35%) | DB: 0.01265 (46%) | 200 OK [http://localhost/pages/edit/3]
-
-
-Processing PagesController#update (for 127.0.0.1 at 2007-08-23 18:41:21) [POST]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"commit"=>"Speichern", "action"=>"update", "id"=>"3", "controller"=>"pages", "page"=>{"category"=>"web", "title"=>"HTML Referenz", "body"=>"Alles über HTML"}}
-  [4;35;1mPage Columns (0.011603)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001002)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-  [4;35;1mSQL (0.000251)[0m   [0mBEGIN[0m
-  [4;36;1mPage Update (0.000403)[0m   [0;1mUPDATE pages SET `created_at` = '2007-08-21 00:52:46', `title` = 'HTML Referenz', `body` = 'Alles über HTML', `category` = 'web', `updated_at` = '2007-08-23 18:41:21' WHERE `id` = 3[0m
-  [4;35;1mSQL (0.000763)[0m   [0mCOMMIT[0m
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:17) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"12", "controller"=>"pages"}
+  [4;35;1mPage Columns (0.002639)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.001982)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 12) [0m
+  [4;35;1mSQL (0.000462)[0m   [0mBEGIN[0m
+  [4;36;1mPage Destroy (0.000409)[0m   [0;1m DELETE FROM `pages`
+ WHERE `id` = 12
+[0m
+  [4;35;1mSQL (0.000619)[0m   [0mCOMMIT[0m
 Redirected to http://localhost:3000/pages
-Completed in 0.02811 (35 reqs/sec) | DB: 0.01402 (49%) | 302 Found [http://localhost/pages/update/3]
+Completed in 0.01477 (67 reqs/sec) | DB: 0.00611 (41%) | 302 Found [http://localhost/pages/destroy/12]
 
 
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 18:41:21) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
   Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;36;1mPage Load (0.000859)[0m   [0;1mSELECT * FROM pages [0m
-Rendering template within layouts/pages
+  [4;36;1mPage Load (0.001471)[0m   [0;1mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
 Rendering pages/index
-  [4;35;1mPage Columns (0.002396)[0m   [0mSHOW FIELDS FROM pages[0m
-Completed in 0.01732 (57 reqs/sec) | Rendering: 0.00919 (53%) | DB: 0.00326 (18%) | 200 OK [http://localhost/pages]
+  [4;35;1mPage Columns (0.002714)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02407 (41 reqs/sec) | Rendering: 0.00726 (30%) | DB: 0.00418 (17%) | 200 OK [http://localhost/pages]
 
 
-Processing PagesController#new (for 127.0.0.1 at 2007-08-23 18:41:26) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"new", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.011641)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Rendering template within layouts/pages
-Rendering pages/new
-Rendered pages/_form (0.00812)
-Completed in 0.02579 (38 reqs/sec) | Rendering: 0.00938 (36%) | DB: 0.01164 (45%) | 200 OK [http://localhost/pages/new]
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:19) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"13", "controller"=>"pages"}
+  [4;36;1mPage Columns (0.002753)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.001930)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 13) [0m
+  [4;36;1mSQL (0.000301)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Destroy (0.000398)[0m   [0m DELETE FROM `pages`
+ WHERE `id` = 13
+[0m
+  [4;36;1mSQL (0.000632)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 0.02024 (49 reqs/sec) | DB: 0.00601 (29%) | 302 Found [http://localhost/pages/destroy/13]
 
 
-Processing PagesController#new (for 127.0.0.1 at 2007-08-23 18:43:15) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"new", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.011691)[0m   [0mSHOW FIELDS FROM pages[0m
-Rendering template within layouts/pages
-Rendering pages/new
-Rendered pages/_form (0.00914)
-Completed in 0.02716 (36 reqs/sec) | Rendering: 0.01054 (38%) | DB: 0.01169 (43%) | 200 OK [http://localhost/pages/new]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 18:43:38) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:19) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
   Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;36;1mPage Load (0.000948)[0m   [0;1mSELECT * FROM pages [0m
-Rendering template within layouts/pages
+  [4;35;1mPage Load (0.001467)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
 Rendering pages/index
-  [4;35;1mPage Columns (0.289278)[0m   [0mSHOW FIELDS FROM pages[0m
-Completed in 0.30466 (3 reqs/sec) | Rendering: 0.00977 (3%) | DB: 0.29023 (95%) | 200 OK [http://localhost/pages]
+  [4;36;1mPage Columns (0.002818)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 0.01845 (54 reqs/sec) | Rendering: 0.00781 (42%) | DB: 0.00429 (23%) | 200 OK [http://localhost/pages]
 
 
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 18:43:40) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.003733)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.000814)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.01743 (57 reqs/sec) | Rendering: 0.00786 (45%) | DB: 0.00455 (26%) | 200 OK [http://localhost/pages/show/3]
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:20) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"15", "controller"=>"pages"}
+  [4;35;1mPage Columns (0.003127)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.001147)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 15) [0m
+  [4;35;1mSQL (0.000211)[0m   [0mBEGIN[0m
+  [4;36;1mPage Destroy (0.000484)[0m   [0;1m DELETE FROM `pages`
+ WHERE `id` = 15
+[0m
+  [4;35;1mSQL (0.000685)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 0.01910 (52 reqs/sec) | DB: 0.00565 (29%) | 302 Found [http://localhost/pages/destroy/15]
 
 
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-23 18:43:41) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.002532)[0m   [0;1mSHOW FIELDS FROM pages[0m
-  [4;35;1mPage Load (0.000765)[0m   [0mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Rendered pages/_form (0.00807)
-Completed in 0.01747 (57 reqs/sec) | Rendering: 0.00928 (53%) | DB: 0.00330 (18%) | 200 OK [http://localhost/pages/edit/3]
-
-
-Processing PagesController#new (for 127.0.0.1 at 2007-08-23 18:55:03) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"new", "controller"=>"pages"}
-  [4;36;1mPage Columns (0.011708)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Rendering template within layouts/pages
-Rendering pages/new
-Rendered pages/_form (0.00845)
-Completed in 0.02626 (38 reqs/sec) | Rendering: 0.00978 (37%) | DB: 0.01171 (44%) | 200 OK [http://localhost/pages/new]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 18:55:41) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
   Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000995)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
+  [4;36;1mPage Load (0.001407)[0m   [0;1mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
 Rendering pages/index
-  [4;36;1mPage Columns (0.011943)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.02709 (36 reqs/sec) | Rendering: 0.00955 (35%) | DB: 0.01294 (47%) | 200 OK [http://localhost/pages]
+  [4;35;1mPage Columns (0.002796)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.01755 (56 reqs/sec) | Rendering: 0.00700 (39%) | DB: 0.00420 (23%) | 200 OK [http://localhost/pages]
 
 
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 18:55:42) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:22) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"14", "controller"=>"pages"}
+  [4;36;1mPage Columns (0.002699)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.001926)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 14) [0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Destroy (0.000347)[0m   [0m DELETE FROM `pages`
+ WHERE `id` = 14
+[0m
+  [4;36;1mSQL (0.000673)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 0.01465 (68 reqs/sec) | DB: 0.00585 (39%) | 302 Found [http://localhost/pages/destroy/14]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;35;1mPage Load (0.001330)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mPage Columns (0.002613)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 0.01643 (60 reqs/sec) | Rendering: 0.00636 (38%) | DB: 0.00394 (24%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:23) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"6", "controller"=>"pages"}
+  [4;35;1mPage Columns (0.003206)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.001149)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 6) [0m
+  [4;35;1mSQL (0.000205)[0m   [0mBEGIN[0m
+  [4;36;1mPage Destroy (0.000378)[0m   [0;1m DELETE FROM `pages`
+ WHERE `id` = 6
+[0m
+  [4;35;1mSQL (0.000689)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 0.01550 (64 reqs/sec) | DB: 0.00563 (36%) | 302 Found [http://localhost/pages/destroy/6]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001217)[0m   [0;1mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;35;1mPage Columns (0.002312)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.01583 (63 reqs/sec) | Rendering: 0.00625 (39%) | DB: 0.00353 (22%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:24) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"7", "controller"=>"pages"}
+  [4;36;1mPage Columns (0.010065)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.001564)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 7) [0m
+  [4;36;1mSQL (0.001009)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Destroy (0.000386)[0m   [0m DELETE FROM `pages`
+ WHERE `id` = 7
+[0m
+  [4;36;1mSQL (0.000723)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 0.02224 (44 reqs/sec) | DB: 0.01375 (61%) | 302 Found [http://localhost/pages/destroy/7]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:24) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;35;1mPage Load (0.001229)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mPage Columns (0.002927)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 0.01654 (60 reqs/sec) | Rendering: 0.00660 (39%) | DB: 0.00416 (25%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:25) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"8", "controller"=>"pages"}
+  [4;35;1mPage Columns (0.002678)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.007243)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 8) [0m
+  [4;35;1mSQL (0.000514)[0m   [0mBEGIN[0m
+  [4;36;1mPage Destroy (0.001033)[0m   [0;1m DELETE FROM `pages`
+ WHERE `id` = 8
+[0m
+  [4;35;1mSQL (0.004788)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 0.02543 (39 reqs/sec) | DB: 0.01626 (63%) | 302 Found [http://localhost/pages/destroy/8]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001199)[0m   [0;1mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;35;1mPage Columns (0.002963)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.01589 (62 reqs/sec) | Rendering: 0.00580 (36%) | DB: 0.00416 (26%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#destroy (for 127.0.0.1 at 2008-03-19 20:54:26) [POST]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"authenticity_token"=>"566b0e17e6c2da2ae33ef5d4c3e00ae98a4d688b", "action"=>"destroy", "id"=>"9", "controller"=>"pages"}
+  [4;36;1mPage Columns (0.002590)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.001818)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 9) [0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Destroy (0.000281)[0m   [0m DELETE FROM `pages`
+ WHERE `id` = 9
+[0m
+  [4;36;1mSQL (0.000679)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/pages
+Completed in 0.09845 (10 reqs/sec) | DB: 0.00553 (5%) | 302 Found [http://localhost/pages/destroy/9]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:54:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;35;1mPage Load (0.001197)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mPage Columns (0.002617)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+Completed in 0.01555 (64 reqs/sec) | Rendering: 0.00522 (33%) | DB: 0.00381 (24%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#show (for 127.0.0.1 at 2008-03-19 20:54:40) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
   Parameters: {"action"=>"show", "id"=>"1", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.011987)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001051)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 1) [0m
-Rendering template within layouts/pages
+  [4;35;1mPage Columns (0.002963)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.001192)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mSQL (0.000191)[0m   [0mBEGIN[0m
+  [4;36;1mPage Update (0.000355)[0m   [0;1mUPDATE `pages` SET `title` = '<em><blink>Rails Referenz</blink></em>', `body` = 'Diese Seite beschreibt Rails', `read_counter` = 2, `category_id` = 1, `published` = NULL, `updated_at` = '2008-03-19 20:54:40' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000685)[0m   [0mCOMMIT[0m
+Rendering template within layouts/referenz
 Rendering pages/show
-Completed in 0.09804 (10 reqs/sec) | Rendering: 0.07999 (81%) | DB: 0.01304 (13%) | 200 OK [http://localhost/pages/show/1]
+  [4;36;1mCategory Columns (0.002542)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.000601)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Completed in 0.02629 (38 reqs/sec) | Rendering: 0.00878 (33%) | DB: 0.00853 (32%) | 200 OK [http://localhost/pages/show/1]
 
 
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 19:02:55) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.011673)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001037)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.02569 (38 reqs/sec) | Rendering: 0.00787 (30%) | DB: 0.01271 (49%) | 200 OK [http://localhost/pages/show/3]
-
-
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 19:03:20) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.011737)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.000915)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.02582 (38 reqs/sec) | Rendering: 0.00803 (31%) | DB: 0.01265 (48%) | 200 OK [http://localhost/pages/show/3]
-
-
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 19:04:49) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.011972)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.002931)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.03018 (33 reqs/sec) | Rendering: 0.00988 (32%) | DB: 0.01490 (49%) | 200 OK [http://localhost/pages/show/3]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 19:05:09) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:58:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
   Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.000878)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
+  [4;36;1mPage Load (0.001148)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000840)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
 Rendering pages/index
-  [4;36;1mPage Columns (0.011603)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.02700 (37 reqs/sec) | Rendering: 0.00931 (34%) | DB: 0.01248 (46%) | 200 OK [http://localhost/pages]
+  [4;36;1mCategory Columns (0.002992)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003006)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02900 (34 reqs/sec) | Rendering: 0.01192 (41%) | DB: 0.00799 (27%) | 200 OK [http://localhost/pages]
 
 
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-23 19:05:19) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.012883)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001085)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Rendered pages/_form (0.00819)
-Completed in 0.02999 (33 reqs/sec) | Rendering: 0.00946 (31%) | DB: 0.01397 (46%) | 200 OK [http://localhost/pages/edit/3]
-
-
-Processing PagesController#show (for 127.0.0.1 at 2007-08-23 22:32:59) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.020146)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.002857)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/show
-Completed in 0.21660 (4 reqs/sec) | Rendering: 0.18127 (83%) | DB: 0.02300 (10%) | 200 OK [http://localhost/pages/show/3]
-
-
-Processing PagesController#edit (for 127.0.0.1 at 2007-08-23 22:33:00) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
-  Parameters: {"action"=>"edit", "id"=>"3", "controller"=>"pages"}
-  [4;35;1mPage Columns (0.017430)[0m   [0mSHOW FIELDS FROM pages[0m
-  [4;36;1mPage Load (0.001326)[0m   [0;1mSELECT * FROM pages WHERE (pages.`id` = 3) [0m
-Rendering template within layouts/pages
-Rendering pages/edit
-Rendered pages/_form (0.01287)
-Completed in 0.03975 (25 reqs/sec) | Rendering: 0.01426 (35%) | DB: 0.01876 (47%) | 200 OK [http://localhost/pages/edit/3]
-
-
-Processing PagesController#index (for 127.0.0.1 at 2007-08-23 22:33:00) [GET]
-  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--07f47226195276fc0b0910b15347b8e554e5c244
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 20:59:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
   Parameters: {"action"=>"index", "controller"=>"pages"}
-  [4;35;1mPage Load (0.001089)[0m   [0mSELECT * FROM pages [0m
-Rendering template within layouts/pages
+  [4;36;1mPage Load (0.001153)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000827)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
 Rendering pages/index
-  [4;36;1mPage Columns (0.015985)[0m   [0;1mSHOW FIELDS FROM pages[0m
-Completed in 0.04607 (21 reqs/sec) | Rendering: 0.01586 (34%) | DB: 0.01707 (37%) | 200 OK [http://localhost/pages]
+  [4;36;1mCategory Columns (0.002577)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003682)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02530 (39 reqs/sec) | Rendering: 0.00728 (28%) | DB: 0.00824 (32%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 22:31:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.016010)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000879)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002595)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002782)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.04378 (22 reqs/sec) | Rendering: 0.00849 (19%) | DB: 0.02227 (50%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 22:32:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001289)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000899)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003060)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003599)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.03298 (30 reqs/sec) | Rendering: 0.01201 (36%) | DB: 0.00885 (26%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 22:33:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001521)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.003938)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003557)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002886)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.12507 (7 reqs/sec) | Rendering: 0.09648 (77%) | DB: 0.01190 (9%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 22:36:27) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001191)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000931)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002508)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003313)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02554 (39 reqs/sec) | Rendering: 0.00771 (30%) | DB: 0.00794 (31%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 22:36:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001338)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000948)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.050486)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.005500)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.07858 (12 reqs/sec) | Rendering: 0.00837 (10%) | DB: 0.05827 (74%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 22:36:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001172)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000858)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002381)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002620)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02443 (40 reqs/sec) | Rendering: 0.00777 (31%) | DB: 0.00703 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 22:37:15) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001151)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000867)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003082)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002866)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02637 (37 reqs/sec) | Rendering: 0.00915 (34%) | DB: 0.00797 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:18:14) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.013380)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001704)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.042941)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003618)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.08404 (11 reqs/sec) | Rendering: 0.00999 (11%) | DB: 0.06164 (73%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:44:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001217)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000877)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002667)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002744)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02437 (41 reqs/sec) | Rendering: 0.00727 (29%) | DB: 0.00750 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:44:56) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001150)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000897)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003052)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003141)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.11018 (9 reqs/sec) | Rendering: 0.01041 (9%) | DB: 0.00824 (7%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:45:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001174)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001187)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002435)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002539)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02667 (37 reqs/sec) | Rendering: 0.00968 (36%) | DB: 0.00733 (27%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:45:33) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001250)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001025)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002438)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003412)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02660 (37 reqs/sec) | Rendering: 0.00826 (31%) | DB: 0.00813 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:45:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001177)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000871)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002666)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002534)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02383 (41 reqs/sec) | Rendering: 0.00749 (31%) | DB: 0.00725 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:45:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001160)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000836)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002255)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002569)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02557 (39 reqs/sec) | Rendering: 0.00792 (30%) | DB: 0.00682 (26%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:46:02) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001204)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000900)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003118)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003738)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02960 (33 reqs/sec) | Rendering: 0.01066 (36%) | DB: 0.00896 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:46:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001152)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.002009)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002455)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002438)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02908 (34 reqs/sec) | Rendering: 0.01041 (35%) | DB: 0.00805 (27%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:46:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001187)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000887)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002188)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002538)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.10423 (9 reqs/sec) | Rendering: 0.00742 (7%) | DB: 0.00680 (6%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:46:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001225)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001732)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003369)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002621)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02779 (35 reqs/sec) | Rendering: 0.00761 (27%) | DB: 0.00895 (32%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:46:27) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001141)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000819)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003402)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003190)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02831 (35 reqs/sec) | Rendering: 0.01032 (36%) | DB: 0.00855 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:46:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001182)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000937)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003293)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002733)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02870 (34 reqs/sec) | Rendering: 0.00776 (27%) | DB: 0.00815 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:52:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001174)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001885)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002456)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002558)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02679 (37 reqs/sec) | Rendering: 0.00766 (28%) | DB: 0.00807 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:53:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001286)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000902)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002527)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002453)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02795 (35 reqs/sec) | Rendering: 0.00864 (30%) | DB: 0.00717 (25%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:53:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001233)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000850)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002593)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002525)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02456 (40 reqs/sec) | Rendering: 0.00727 (29%) | DB: 0.00720 (29%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:54:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001196)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000881)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002410)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002690)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02506 (39 reqs/sec) | Rendering: 0.00765 (30%) | DB: 0.00718 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:54:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001187)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000840)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002354)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002460)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02362 (42 reqs/sec) | Rendering: 0.00733 (31%) | DB: 0.00684 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:55:35) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001738)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001296)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002446)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003170)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02672 (37 reqs/sec) | Rendering: 0.00762 (28%) | DB: 0.00865 (32%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:56:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001194)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000852)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002464)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002519)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02603 (38 reqs/sec) | Rendering: 0.00776 (29%) | DB: 0.00703 (26%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:56:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001311)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000922)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002370)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002767)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02709 (36 reqs/sec) | Rendering: 0.00928 (34%) | DB: 0.00737 (27%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:57:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001176)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000944)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003091)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002577)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02598 (38 reqs/sec) | Rendering: 0.00831 (31%) | DB: 0.00779 (29%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:57:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001282)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001875)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002711)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002517)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02719 (36 reqs/sec) | Rendering: 0.00759 (27%) | DB: 0.00838 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:58:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001200)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000927)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002979)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002987)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.03034 (32 reqs/sec) | Rendering: 0.01038 (34%) | DB: 0.00809 (26%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-19 23:58:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001238)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000929)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002418)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002518)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Completed in 0.02546 (39 reqs/sec) | Rendering: 0.00796 (31%) | DB: 0.00710 (27%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:14:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001196)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000980)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002315)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002470)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00121)
+Completed in 0.02735 (36 reqs/sec) | Rendering: 0.01039 (37%) | DB: 0.00696 (25%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:14:28) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001419)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001199)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002465)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.003958)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00128)
+Completed in 0.04006 (24 reqs/sec) | Rendering: 0.01019 (25%) | DB: 0.00904 (22%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:19:59) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.005629)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000926)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.044623)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.016849)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00061)
+Completed in 0.09953 (10 reqs/sec) | Rendering: 0.01261 (12%) | DB: 0.06803 (68%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:20:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001167)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000851)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002362)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002284)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00058)
+Completed in 0.02486 (40 reqs/sec) | Rendering: 0.00899 (36%) | DB: 0.00666 (26%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:20:43) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001174)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000896)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002430)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002524)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00059)
+Completed in 0.11372 (8 reqs/sec) | Rendering: 0.09703 (85%) | DB: 0.00702 (6%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:21:32) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001269)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001029)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003933)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002963)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00066)
+Completed in 0.02944 (33 reqs/sec) | Rendering: 0.01012 (34%) | DB: 0.00919 (31%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:22:03) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001259)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001056)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002946)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002534)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00096)
+Completed in 0.02714 (36 reqs/sec) | Rendering: 0.00919 (33%) | DB: 0.00780 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:22:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001850)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000969)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002467)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002595)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00060)
+Completed in 0.02614 (38 reqs/sec) | Rendering: 0.00847 (32%) | DB: 0.00788 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:22:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001183)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.001255)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002512)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002594)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00055)
+Completed in 0.02649 (37 reqs/sec) | Rendering: 0.00915 (34%) | DB: 0.00754 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:23:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001234)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000904)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002485)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002555)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00058)
+Completed in 0.02527 (39 reqs/sec) | Rendering: 0.00845 (33%) | DB: 0.00718 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:23:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001213)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000862)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002939)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002958)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00072)
+Completed in 0.02887 (34 reqs/sec) | Rendering: 0.01074 (37%) | DB: 0.00797 (27%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:24:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001140)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000951)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002215)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002551)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00060)
+Completed in 0.11855 (8 reqs/sec) | Rendering: 0.00890 (7%) | DB: 0.00686 (5%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:24:27) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001331)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000921)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002391)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002541)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00062)
+Completed in 0.02525 (39 reqs/sec) | Rendering: 0.00834 (33%) | DB: 0.00718 (28%) | 200 OK [http://localhost/pages]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-03-20 00:24:49) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/categories" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing.rb:1432:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing.rb:1415:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    script/server:3:in `require'
+    script/server:3
+
+Rendering /Users/jcf/dev/work/referenz/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:25:26) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001232)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000833)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002431)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002526)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00053)
+Completed in 0.02722 (36 reqs/sec) | Rendering: 0.01079 (39%) | DB: 0.00702 (25%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:25:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001206)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000865)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.003730)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002949)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00068)
+Completed in 0.02888 (34 reqs/sec) | Rendering: 0.01070 (37%) | DB: 0.00875 (30%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:25:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001174)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000906)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002395)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002457)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00128)
+Completed in 0.02572 (38 reqs/sec) | Rendering: 0.00889 (34%) | DB: 0.00693 (26%) | 200 OK [http://localhost/pages]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2008-03-20 00:26:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--529a94317ca80d7bac9afcfad2aac847ebce37f7
+  Parameters: {"action"=>"index", "controller"=>"pages"}
+  [4;36;1mPage Load (0.001261)[0m   [0;1mSELECT * FROM `pages` [0m
+  [4;35;1mCategory Load (0.000955)[0m   [0mSELECT * FROM `categories` ORDER BY name[0m
+Rendering template within layouts/referenz
+Rendering pages/index
+  [4;36;1mCategory Columns (0.002359)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mPage Columns (0.002558)[0m   [0mSHOW FIELDS FROM `pages`[0m
+Rendered shared/_navigation (0.00057)
+Completed in 0.02875 (34 reqs/sec) | Rendering: 0.01153 (40%) | DB: 0.00713 (24%) | 200 OK [http://localhost/pages]

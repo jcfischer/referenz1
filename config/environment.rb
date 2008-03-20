@@ -29,6 +29,11 @@ Rails::Initializer.run do |config|
   # Use the database for sessions instead of the file system
   # (create the session table with 'rake db:sessions:create')
   # config.action_controller.session_store = :active_record_store
+  
+  config.action_controller.session = {
+    :session_key => '_referenz_session',
+    :secret      => '0ed0a365d2dc2bbb94a0d66ea348ac7bfd2da43ce90933859e1b413f614f50f5b9fec9b3f9b63a91d6e62e15b381f0e99573a26441b130698df73f72f01ca1e3'
+  }
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper, 
@@ -42,7 +47,6 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
   
   # See Rails::Configuration for more options
-  config.action_controller.session = { :session_key => "_referenz_session", :secret => "ganz geheim" }
 end
 
 # Add new inflection rules using the following format 
