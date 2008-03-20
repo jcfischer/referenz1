@@ -8,10 +8,11 @@ class MoveCategories < ActiveRecord::Migration
     end
 
     remove_column :pages, :kategory
+
   end
 
   def self.down
-    add_colum :pages, :kategory, :string
+    add_column :pages, :kategory, :string
 
     Page.find(:all).each do |page|
       cat = page.category
@@ -19,6 +20,7 @@ class MoveCategories < ActiveRecord::Migration
     end
 
     rename_column :pages, :kategory, :category
+    remove_column :table_name, :column_name
   end
 
 end
