@@ -13,11 +13,11 @@
     </div>
   </div>
   <div id="main">
-    <div id="content">
-      <%= yield %>
-    </div>
     <div id="sidebar">
       <%= yield :sidebar %>
+    </div>
+    <div id="content">
+      <%= yield %>
     </div>
     <div class="clear" />
   </div>
